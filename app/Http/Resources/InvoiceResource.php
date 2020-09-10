@@ -20,9 +20,8 @@ class InvoiceResource extends JsonResource
             'total_amount' => $this->total_amount,
             'paid_amount' => $this->paid_amount,
             'due' => $this->due,
-            'quantity' => $this->quantity,
             'user' => new userResource($this->users),
-            'products' => InvoiceProductResource::collection($this->products1)
+            'product' => ProductResource::collection($this->product)
         ];
     }
 }
